@@ -6,7 +6,7 @@ cd Wjets
 git clone https://github.com/phy-guanzh/condor_wjets.git
 cd condor_wjets
 mkdir log
-python build_submit.py
+python build_submit_gensim.py
 rm build_submit.py
 chmod 777 wrapper*.sh
 python submit_jobs.py
