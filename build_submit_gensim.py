@@ -2,22 +2,17 @@ import os
 
 if __name__ == "__main__":
     wrapper_version={
-        'wrapper2018.sh':'SMP-RunIIFall18wmLHEGS-00059.root',
+        'wrapper2018.sh':'SMP-RunIIFall18wmLHEGS-00138.root',
 #        'wrapper2017.sh':'SMP-RunIIFall17NanoAODv5-00023.root',
 #        'wrapper2016.sh':'SMP-RunIISummer16NanoAODv5-00095.root',
     }
     _year='wrapper2018.sh'
 
     params = [
-        '70to100',
-        '100to200',
-        '200to400',
-        '400to600',
-        '600to800',
-        '800to1200',
-        '1200to2500',
-        '2500toInf',
-#        'LL_WW_rf',
+        '0j',
+        '1j',
+        '2j',
+        '012j',
         ]
 
     for ipar,param in enumerate(params):
@@ -30,7 +25,7 @@ if __name__ == "__main__":
             outfile.write("request_cpus = 4\n")
             #outfile.write("request_memory = 6 Gb\n")
             #outfile.write("request_disk = 8 Gb\n")
-            outfile.write("requirements = (OpSysAndVer =?= \"SLCern6\" || OpSysAndVer =?= \"SL6\" || OpSysAndVer =?= \"RedHat6\" || OpSysMajorVer == 6)\n")            
+            outfile.write("requirements = (OpSysAndVer =?= \"SLCern7\" || OpSysAndVer =?= \"SL7\" || OpSysAndVer =?= \"RedHat7\" || OpSysMajorVer == 7)\n")            
             outfile.write("should_transfer_files = YES\n")
             #outfile.write("transfer_input_files = /etc/ciconnect/templates/cmssw_setup.sh\n")
             outfile.write("Error = log/{0}.err_$(Cluster)-$(Process)\n".format(int_process))
@@ -38,5 +33,5 @@ if __name__ == "__main__":
             outfile.write("Log = log/{0}.log_$(Cluster)\n".format(int_process))
             outfile.write("transfer_output_remaps = \"{0} = {1}_$(Cluster)_$(Process).root\"\n".format(wrapper_version[_year],int_process))
             outfile.write("when_to_transfer_output = ON_EXIT\n")
-            outfile.write("Queue 2\n")
+            outfile.write("Queue 50\n")
         #os.system("curl http://stash.osgconnect.net/+jiexiao/wrapper_events.sh -o wrapper_{0}.sh".format(int_process))

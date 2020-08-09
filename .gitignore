@@ -1,0 +1,10 @@
+README.md
+/cmssw-tmp
+cmssw_setup.sh
+/lheevent
+*.log
+*.root
+*.tar
+*.bz2
+*.lhe
+*.xz
