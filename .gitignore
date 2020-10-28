@@ -1,0 +1,6 @@
+/root
+/log
+*.root
+*.pyc
+*.xz
+*.tar
