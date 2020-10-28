@@ -1,6 +1,10 @@
+/tmp
+/cmssw-tmp
 /root
 /log
 *.root
 *.pyc
 *.xz
 *.tar
+*.bz2
+*.jdl
