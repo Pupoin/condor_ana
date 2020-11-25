@@ -9,11 +9,16 @@ exit_on_error() {
     fi
 }
 
-#### FRAMEWORK SANDBOX SETUP ####
+##  change to sl6
+wget http://stash.osgconnect.net/+zhyuan/anaCondor/cmssw-cc6_condor  --no-check-certificate
+chmod +x cmssw-cc6_condor
+./cmssw-cc6_condor
+echo "hasdfasdfadfadf"
 # Load cmssw_setup function
-wget http://stash.osgconnect.net/+zhyuan/anaCondor/cmssw_setup.sh
+wget http://stash.osgconnect.net/+zhyuan/anaCondor/cmssw_setup.sh --no-check-certificate
 source cmssw_setup.sh
 
+echo "2hasdfasdfadfadf"
 # Setup CMSSW Base
 export VO_CMS_SW_DIR=/cvmfs/cms.cern.ch
 source $VO_CMS_SW_DIR/cmsset_default.sh
