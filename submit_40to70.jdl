@@ -9,4 +9,4 @@ Output = log/40to70.out_$(Cluster)-$(Process)
 Log = log/40to70.log_$(Cluster)
 transfer_output_remaps = "SMP-RunIIFall18wmLHEGS-00059.root = root/40to70_$(Cluster)_$(Process).root"
 when_to_transfer_output = ON_EXIT
-Queue 50
+Queue 1
