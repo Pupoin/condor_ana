@@ -1,12 +1,9 @@
 # condor for ana,  How to use
 
 ```bash
-mkdir Wjets
-cd Wjets
 git clone https://github.com/phy-guanzh/condor_wjets.git
-cd condor_wjets
 mkdir log
+mkdir root
 python build_submit_gensim.py
-chmod 777 wrapper*.sh
 python submit_jobs.py
 ```
