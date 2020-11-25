@@ -1,6 +1,6 @@
-# condor for ana
-# How to use
+# condor for ana,  How to use
 
+```bash
 mkdir Wjets
 cd Wjets
 git clone https://github.com/phy-guanzh/condor_wjets.git
