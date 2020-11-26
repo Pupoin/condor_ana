@@ -30,7 +30,7 @@ if __name__ == "__main__":
             outfile.write("request_cpus = 4\n")
             #outfile.write("request_memory = 6 Gb\n")
             #outfile.write("request_disk = 8 Gb\n")
-            outfile.write("requirements = (OpSysAndVer =?= \"SLCern6\" || OpSysAndVer =?= \"SL6\" || OpSysAndVer =?= \"RedHat6\" || OpSysMajorVer == 6)\n")            
+            outfile.write("#requirements = (OpSysAndVer =?= \"SLCern6\" || OpSysAndVer =?= \"SL6\" || OpSysAndVer =?= \"RedHat6\" || OpSysMajorVer == 6)\n")            
             outfile.write("should_transfer_files = YES\n")
             #outfile.write("transfer_input_files = /etc/ciconnect/templates/cmssw_setup.sh\n")
             outfile.write("Error = log/{0}.err_$(Cluster)-$(Process)\n".format(int_process))
