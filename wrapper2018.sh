@@ -13,7 +13,7 @@ source $VO_CMS_SW_DIR/cmsset_default.sh
 
 sandbox_name="sandbox.tar"
 cfgpy="cfg.py"
-wget --no-check-certificate --progress=bar "http://stash.osgconnect.net/+zhyuan/stitch_inclusive/dyjet_ptbin_updated/gridpack_265/a.py" -O ${cfgpy}
+wget --no-check-certificate --progress=bar "http://stash.osgconnect.net/+zhyuan/stitch_inclusive/dyjet_ptbin_updated/gridpack_265/cfg.py" -O ${cfgpy}
 wget --no-check-certificate --progress=bar "http://stash.osgconnect.net/+zhyuan/sandbox/sandbox-CMSSW_11_2_0_pre10-e8a8499.tar.gz" -O ${sandbox_name}
 
 cmssw_setup ${sandbox_name}
