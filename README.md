@@ -1,7 +1,7 @@
 # condor for ana,  How to use
 
 ```bash
-git clone https://github.com/phy-guanzh/condor_wjets.git
+git clone https://github.com/Pupoin/condor_ana.git
 mkdir log
 mkdir root
 python build_submit_gensim.py
